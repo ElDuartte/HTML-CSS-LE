@@ -33,6 +33,10 @@
 	--gray10: #616161;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	color: var(--gray30);
 	font-family: roboto, arial, helvetica;
@@ -45,8 +49,21 @@ a {
 
 header {
 	font-size: 14px;
+	width: 188px;
 	color: var(--gray10);
+	position: absolute;
+	/* border: 1px solid red; */
+	/* background: red; */
+	top: 64px;
+	left: -232px;
+	text-decoration: none;
+	z-index: 1;
 }
+
+header li {
+	margin-bottom: 16px;
+}
+
 header a {
 	color: var(--gray10);
 	text-decoration: none;
@@ -58,12 +75,14 @@ header a:hover {
 
 nav details summary {
 	font-weight: bold;
+	line-height: 24px;
 }
 
 h1 {
 	font-size: 60px;
 	margin-top: 64px;
 	margin-bottom: 16px;
+	font-weight: normal;
 }
 
 h1 + p {
@@ -77,12 +96,17 @@ hr {
 h2 {
 	font-size: 2em;
 	margin: 64px 0 40px;
+	font-weight: normal;
 }
 
 h3 {
 	font-size: 1.5em;
 	margin-top: 16px;
 	margin-bottom: 24px;
+	font-weight: normal;
+	position: sticky;
+	top: 0;
+	background: white;
 }
 
 pre {
@@ -108,8 +132,17 @@ blockquote span::before {
 	content: "-";
 }
 
+.header-content {
+	position: relative;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+}
+
 .main {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 
 .wrapper {
@@ -119,7 +152,7 @@ blockquote span::before {
 
 .main-content {
 	background: white;
-	padding: 20px;
+	/* padding: 20px; */
 }
 
 .hero {
@@ -158,7 +191,7 @@ blockquote span::before {
 
 .section-content h3 {
 	counter-increment: titleList;
-	padding-bottom: 4px;
+	padding-bottom: 8px;
 }
 
 .section-content h3::before {
@@ -167,8 +200,11 @@ blockquote span::before {
 
 .section-content h3::after {
 	content: "";
-	width: 32px;
+	width: 80px;
 	height: 4px;
 	background: var(--gray30);
 	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
