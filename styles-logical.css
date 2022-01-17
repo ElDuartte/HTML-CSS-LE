@@ -46,28 +46,16 @@ a {
 }
 
 .header {
-	position: sticky;
-	inset-block-start: -45px;
 }
 
 .header-content {
-	position: relative;
-	inset-block-start: 65px;
+	padding-inline: 20px;
 }
 
 header {
+	margin-block-start: 20px;
 	font-size: 14px;
 	color: var(--white);
-	position: absolute;
-	/* top */
-	inset-block-start: 0;
-	/* bottom */
-	/* inset-block-end: ; */
-	/* left */
-	inset-inline-start: -208px;
-	/* right */
-	/* inset-inline-end: ; */
-	inline-size: 188px;
 }
 
 header li {
@@ -95,8 +83,9 @@ h3 {
 } */
 
 h1 {
-	font-size: 60px;
-	margin-block-start: 64px;
+	font-size: 40px;
+	margin-block-start: 20px;
+	margin-block-end: 16px;
 }
 
 h2 {
@@ -131,7 +120,7 @@ p {
 
 .hero {
 	background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
-	height: 350px;
+	block-size: 50px;
 }
 
 .section-content img {
@@ -247,4 +236,32 @@ blockquote p {
 
 .form input::placeholder {
 	color: var(--white20);
+}
+
+@media screen and (min-width: 1366px) {
+	h1 {
+		font-size: 60px;
+		margin-block-start: 64px;
+	}
+	.hero {
+		block-size: 350px;
+	}
+
+	.header {
+		position: sticky;
+		inset-block-start: -45px;
+	}
+
+	.header-content {
+		position: relative;
+		inset-block-start: 65px;
+		padding-inline: 0;
+	}
+
+	header {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: -208px;
+		inline-size: 188px;
+	}
 }
